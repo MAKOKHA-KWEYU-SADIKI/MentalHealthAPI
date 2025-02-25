@@ -11,10 +11,10 @@ import {cors} from 'hono/cors'
 import{prometheus} from '@hono/prometheus'
 import{csrf} from 'hono/csrf'
 import{trimTrailingSlash} from 'hono/trailing-slash'
-import AIrouter from './chatbot/chatbot.router'
+// import AIrouter from './chatbot/chatbot.router'
 import { diagnosisRouter } from './diagnostic/diagnostic.router'
 // import tokenization from './mpesa/token'
-import chatbot from './chatbot/chatbot.router'
+// import chatbot from './chatbot/chatbot.router'
 const app = new Hono();
 app.use(logger())
 app.use(csrf())
@@ -30,13 +30,13 @@ app.get('/metrics',printMetrics)
   app.use('*', cors())
   console.log("server is running ")
 //routes
-app.route("/api",AIrouter)
+// app.route("/api",AIrouter)
 app.route("/api",userRouter)
 app.route("/api",authRouter)
 app.route("/api",therapistRouter)
 app.route('/api',sessionRouter)
 app.route('/api',bookingRouter)
-app.route("/api",chatbot)
+// app.route("/api",chatbot)
 app.route("/api",diagnosisRouter)
 
 serve({
