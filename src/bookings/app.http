@@ -1,0 +1,22 @@
+POST http://localhost:8000/api/book
+Content-Type: application/json
+
+{
+   "user_id": 2,
+    "therapist_id": 2,
+    "session_date": "2025-03-03:00:00",
+    "booking_status": "pending"
+}
+###
+GET http://localhost:8000/api/book
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZnVsbF9uYW1lIjoiQWJkdWxyYWhtYW4gQWxsaSAiLCJjb250YWN0X3Bob25lIjoiMDc5OTA4NzE4OCIsImFkZHJlc3MiOiI5MCBSaXlhZGgiLCJpZCI6NH0sInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MDUyMjA5MH0.2NAagAf0HJoKyrlCrvIReKzCGaHiaXUmNwrOQB08BgE
+###
+GET http://localhost:8000/api/book/1
+###
+PUT http://localhost:8000/api/book/1
+Content-Type: application/json
+
+{
+   "booking_status": "approved",
+   "session_date": "2025-03-03:00:00"
+}

@@ -61,7 +61,7 @@ CREATE TABLE "sessions" (
 	"session_id" serial PRIMARY KEY NOT NULL,
 	"user_id" integer NOT NULL,
 	"therapist_id" integer NOT NULL,
-	"session_date" timestamp NOT NULL,
+	"session_date" timestamp DEFAULT now(),
 	"session_notes" text,
 	"created_at" timestamp DEFAULT now(),
 	"updated_at" timestamp DEFAULT now()

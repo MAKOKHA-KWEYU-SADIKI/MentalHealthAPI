@@ -3,10 +3,9 @@ import { z } from 'zod'
 
 
 export const sessionsSchema = z.object({
-      full_name: z.string(),
-      email: z.string(),
-      contact_phone: z.string(),
-      address: z.string(),
-      role: z.string()
+      therapist_id: z.number(),
+      user_id: z.number(),
+      session_notes: z.string(),
+      session_date: z.date(),
 })
 

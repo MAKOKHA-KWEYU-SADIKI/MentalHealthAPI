@@ -1,0 +1,7 @@
+POST http://localhost:8000/api/chatbot
+Content-Type: application/json
+
+{
+
+    "message": "What is the capital of Kenya?"
+}

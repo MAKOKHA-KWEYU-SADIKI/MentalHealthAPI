@@ -1,6 +1,6 @@
 
 import { eq } from "drizzle-orm";
-import db from "../drizzle/db";
+import {db} from "../drizzle/db";
 import { TISession, TSSession, sessions, } from "../drizzle/schema";
 
 export const SessionsService = async (limit?: number): Promise<TSSession[] | null> => {

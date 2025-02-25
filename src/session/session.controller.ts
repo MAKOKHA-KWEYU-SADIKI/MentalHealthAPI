@@ -31,9 +31,7 @@ export const getsession = async (c: Context) => {
 export const createsession = async (c: Context) => {
     try {
         const session = await c.req.json();
-        const password=session.password;
-        const hashedPassword=await bcrypt.hash(password,10);
-        session.password=hashedPassword;
+      
         const createdsession = await createSessionservice(session);
 
 

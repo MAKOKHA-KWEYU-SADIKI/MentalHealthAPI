@@ -1,0 +1,19 @@
+POST http://localhost:8000/api/diagnosis
+Content-Type: application/json
+
+{
+ "user_id":1,
+ "diagnosis":"healthy",
+ "recommendations":"do practice"
+}
+###
+GET http://localhost:8000/api/diagnosis/1
+###
+GET http://localhost:8000/api/diagnosis
+###
+PUT http://localhost:8000/api/diagnosis/1
+Content-Type: application/json
+
+{
+ "recommendations":" keep visiting healthcare"
+}

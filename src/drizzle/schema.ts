@@ -54,7 +54,7 @@ import {
     id: serial("session_id").primaryKey(),
     user_id: integer("user_id").notNull().references(() => users.id),
     therapist_id: integer("therapist_id").notNull().references(() => therapists.id),
-    session_date: timestamp("session_date").notNull(),
+    session_date: timestamp("session_date").defaultNow(),
     session_notes: text("session_notes"),
     created_at: timestamp("created_at").defaultNow(),
     updated_at: timestamp("updated_at").defaultNow(),
@@ -165,5 +165,11 @@ export type TSAuthentication = typeof Authentication.$inferSelect;
 export type TITherapists = typeof therapists.$inferInsert;
 export type TSTherapists = typeof  therapists.$inferSelect
 
+export type TIDiagnostics = typeof diagnostics.$inferInsert;
+export type TSDiagnostics = typeof diagnostics.$inferSelect;
+
 export type TISession=typeof sessions.$inferInsert;
 export type TSSession=typeof sessions.$inferSelect
+
+export type TIbooking =typeof bookings.$inferInsert;
+export type TSbooking =typeof bookings.$inferSelect;

@@ -1,5 +1,6 @@
 ###
 POST http://localhost:8000/api/therapists
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZnVsbF9uYW1lIjoiQWJkdWxyYWhtYW4gQWxsaSAiLCJjb250YWN0X3Bob25lIjoiMDc5OTA4NzE4OCIsImFkZHJlc3MiOiI5MCBSaXlhZGgiLCJpZCI6NH0sInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MDQ2ODIwM30.34MS83NPZCOFQm7Y4pVvUwzRuWVH7PvpGjHGOzXjLmU
 Content-Type: application/json
 
 {
@@ -15,8 +16,14 @@ Content-Type: application/json
 
 {
 
-   "address": "70 kutus"
+   "full_name": "Bilal Juma"
+
 }
 ###
-
+GET http://localhost:8000/api/therapists/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZnVsbF9uYW1lIjoiQWJkdWxyYWhtYW4gQWxsaSAiLCJjb250YWN0X3Bob25lIjoiMDc5OTA4NzE4OCIsImFkZHJlc3MiOiI5MCBSaXlhZGgiLCJpZCI6NH0sInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MDQ2ODIwM30.34MS83NPZCOFQm7Y4pVvUwzRuWVH7PvpGjHGOzXjLmU
+###
+GET http://localhost:8000/api/therapists
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZnVsbF9uYW1lIjoiQWJkdWxyYWhtYW4gQWxsaSAiLCJjb250YWN0X3Bob25lIjoiMDc5OTA4NzE4OCIsImFkZHJlc3MiOiI5MCBSaXlhZGgiLCJpZCI6NH0sInJvbGUiOiJhZG1pbiIsImV4cCI6MTc0MDQ2ODIwM30.34MS83NPZCOFQm7Y4pVvUwzRuWVH7PvpGjHGOzXjLmU
+###
 DELETE http://localhost:8000/api/therapists/1
