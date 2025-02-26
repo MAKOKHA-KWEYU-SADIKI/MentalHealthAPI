@@ -6,6 +6,6 @@ export const sessionsSchema = z.object({
       therapist_id: z.number(),
       user_id: z.number(),
       session_notes: z.string(),
-      session_date: z.date(),
+      session_date: z.coerce.date(),
 })
 

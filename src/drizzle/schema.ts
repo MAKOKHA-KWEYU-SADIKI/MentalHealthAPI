@@ -1,15 +1,5 @@
 import {
-    pgTable,
-    serial,
-    text,
-    varchar,
-    integer,
-    primaryKey,
-    decimal,
-    boolean,
-    timestamp,
-    date,
-    pgEnum,
+pgTable,serial,text,varchar,integer,primaryKey,decimal,boolean,timestamp,date,pgEnum,
   } from "drizzle-orm/pg-core";
   import { relations } from "drizzle-orm";
   
@@ -41,6 +31,7 @@ import {
     specialization: varchar("specialization", { length: 255 }),
     experience_years: integer("experience_years").default(0),
     contact_phone: varchar("contact_phone", { length: 20 }),
+    availability:varchar("availability", { length: 255 }).default("Available").notNull(),
     created_at: timestamp("created_at").defaultNow(),
     updated_at: timestamp("updated_at").defaultNow(),
   });
@@ -54,7 +45,7 @@ import {
     id: serial("session_id").primaryKey(),
     user_id: integer("user_id").notNull().references(() => users.id),
     therapist_id: integer("therapist_id").notNull().references(() => therapists.id),
-    session_date: timestamp("session_date").defaultNow(),
+    session_date: date("session_date").defaultNow(),
     session_notes: text("session_notes"),
     created_at: timestamp("created_at").defaultNow(),
     updated_at: timestamp("updated_at").defaultNow(),
@@ -128,7 +119,7 @@ export const bookings = pgTable("bookings", {
     id: serial("booking_id").primaryKey(),
     user_id: integer("user_id").notNull().references(() => users.id),
     therapist_id: integer("therapist_id").notNull().references(() => therapists.id),
-    session_date: timestamp("session_date").notNull(),
+    session_date: date("session_date").notNull(),
     booking_status: varchar("booking_status", { length: 50 }).default("Pending"), // Could be "Confirmed", "Cancelled", etc.
     created_at: timestamp("created_at").defaultNow(),
     updated_at: timestamp("updated_at").defaultNow(),
@@ -173,3 +164,9 @@ export type TSSession=typeof sessions.$inferSelect
 
 export type TIbooking =typeof bookings.$inferInsert;
 export type TSbooking =typeof bookings.$inferSelect;
+
+export type TIResource=typeof resources.$inferInsert;
+export type TSResource=typeof resources.$inferSelect;
+
+export type TIFeedback=typeof feedback.$inferInsert;
+export type TSFeedback=typeof feedback.$inferSelect;

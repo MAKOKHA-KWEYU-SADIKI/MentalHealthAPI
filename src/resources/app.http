@@ -1,0 +1,20 @@
+POST  http://localhost:8000/api/resource
+Content-Type: application/json
+
+{
+  "title": "My App",
+  "content": "My App Description"
+}
+
+###
+GET http://localhost:8000/api/resource
+###
+POST  http://localhost:8000/api/resource/2
+Content-Type: application/json
+
+{
+  "title": "depression and anxiety",
+  "content": "one of the main reasons as to why people loose hope the only best way is to reconnect with Allah their creator"
+}
+###
+DELETE http://localhost:8000/api/resource/2

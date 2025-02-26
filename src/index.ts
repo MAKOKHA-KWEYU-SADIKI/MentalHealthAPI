@@ -6,15 +6,14 @@ import { sessionRouter } from './session/session.router'
 import {authRouter} from '../src/authentication/auth.router'
 import { therapistRouter } from './therapists/therapists.router'
 import { bookingRouter } from './bookings/booking.router'
+import { resourceRouter } from './resources/resources.router'
 import { serve } from '@hono/node-server'
 import {cors} from 'hono/cors'
 import{prometheus} from '@hono/prometheus'
 import{csrf} from 'hono/csrf'
 import{trimTrailingSlash} from 'hono/trailing-slash'
-// import AIrouter from './chatbot/chatbot.router'
 import { diagnosisRouter } from './diagnostic/diagnostic.router'
-// import tokenization from './mpesa/token'
-// import chatbot from './chatbot/chatbot.router'
+import { feedbackRouter } from './feedback/feedback.router'
 const app = new Hono();
 app.use(logger())
 app.use(csrf())
@@ -32,7 +31,9 @@ app.get('/metrics',printMetrics)
 //routes
 // app.route("/api",AIrouter)
 app.route("/api",userRouter)
+app.route("/api",feedbackRouter)
 app.route("/api",authRouter)
+app.route("/api",resourceRouter)
 app.route("/api",therapistRouter)
 app.route('/api',sessionRouter)
 app.route('/api',bookingRouter)

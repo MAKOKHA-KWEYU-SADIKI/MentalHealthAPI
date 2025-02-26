@@ -2,10 +2,10 @@ POST http://localhost:8000/api/book
 Content-Type: application/json
 
 {
-   "user_id": 2,
-    "therapist_id": 2,
-    "session_date": "2025-03-03:00:00",
-    "booking_status": "pending"
+   "user_id": 1,
+   "therapist_id": 1,
+   "session_date": "2025-03-03",
+   "booking_status": "pending"
 }
 ###
 GET http://localhost:8000/api/book

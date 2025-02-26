@@ -1,0 +1,26 @@
+GET http://localhost:8000/api/feedback
+###
+POST http://localhost:8000/api/feedback
+Content-Type: application/json
+
+{
+    "user_id":1,
+    "session_id":1,
+    "rating":5,
+    "comments":"Great session!"
+}
+###
+PUT http://localhost:8000/api/feedback/1
+Content-Type: application/json
+
+{
+    "rating":5,
+    "comments":"Allhamdullillah it was an amazing session!"
+}
+###
+DELETE http://localhost:8000/api/feedback/1
+###
+GET http://localhost:8000/api/feedback
+###
+DELETE  http://localhost:8000/api/feedback/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZnVsbF9uYW1lIjoiQWJkdWxyYWhtYW4gU2FkcXVlICIsImNvbnRhY3RfcGhvbmUiOiIwNzk5MDg3MTg4IiwiYWRkcmVzcyI6IjkwIFJpeWFkaCIsImlkIjozfSwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzQwNjA5ODQ0fQ.iCZQqNzkkgQGu9viD2e6lnjTr8dXh-fJukORpBnN5FI

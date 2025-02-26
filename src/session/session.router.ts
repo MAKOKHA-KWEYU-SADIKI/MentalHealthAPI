@@ -5,10 +5,10 @@ import { sessionsSchema } from "./validator";
 import { adminRoleAuth } from '../middleware/bearAuth'
 export const sessionRouter = new Hono();
 //get all sessions
-sessionRouter.get("/sessions",adminRoleAuth ,listSessions) 
+sessionRouter.get("/sessions" ,listSessions) 
 
 //get a single session   api/sessions/1
-sessionRouter.get("/sessions/:id",adminRoleAuth, getsession)
+sessionRouter.get("/sessions/:id", getsession)
 
 // create a session 
 sessionRouter.post("/sessions", zValidator('json', sessionsSchema, (result, c) => {

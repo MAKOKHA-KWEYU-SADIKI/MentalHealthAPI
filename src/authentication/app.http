@@ -7,10 +7,10 @@ Content-Type: application/json
 
 
   "full_name": "Abdulrahman Sadque ",
-  "email": "Abdulazizz21@gmail.com",
+  "email": "Abdulaziz21@gmail.com",
   "contact_phone": "0799087188",
   "address": "90 Riyadh",
-  "role": "user",
+  "role": "admin",
   "password": "kms123"
 }
 ###

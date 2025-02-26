@@ -1,5 +1,5 @@
 {
-  "id": "7f50e3ab-2887-4fbd-bea4-0e8078c5ac15",
+  "id": "4ebb8141-24d6-4c9d-b7db-70ed21483844",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -109,7 +109,7 @@
         },
         "session_date": {
           "name": "session_date",
-          "type": "timestamp",
+          "type": "date",
           "primaryKey": false,
           "notNull": true
         },
@@ -473,7 +473,7 @@
         },
         "session_date": {
           "name": "session_date",
-          "type": "timestamp",
+          "type": "date",
           "primaryKey": false,
           "notNull": false,
           "default": "now()"
@@ -568,6 +568,13 @@
           "type": "varchar(20)",
           "primaryKey": false,
           "notNull": false
+        },
+        "availability": {
+          "name": "availability",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Available'"
         },
         "created_at": {
           "name": "created_at",

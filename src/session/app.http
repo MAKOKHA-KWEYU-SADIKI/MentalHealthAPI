@@ -3,22 +3,18 @@ GET http://localhost:8000/api/sessions
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZnVsbF9uYW1lIjoiQ2hyaXN0aW5lIFJpYW4gIiwiY29udGFjdF9waG9uZSI6IjA3OTkwODcxODgiLCJhZGRyZXNzIjoiOTAga2VueWEiLCJpZCI6MX0sInJvbGUiOiJhZG1pbiIsImV4cCI6MTczOTU3MjI4OX0.jN-mil8vpg8OaYlvh41E46MgrC-YdCsXexJgFYCOcO8
 ###
 // Getting by ID
-GET http://localhost:8000/api/sessions/1
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZnVsbF9uYW1lIjoiQ2hyaXN0aW5lIFJpYW4gIiwiY29udGFjdF9waG9uZSI6IjA3OTkwODcxODgiLCJhZGRyZXNzIjoiOTAga2VueWEiLCJpZCI6MX0sInJvbGUiOiJhZG1pbiIsImV4cCI6MTczOTU3MjI4OX0.jN-mil8vpg8OaYlvh41E46MgrC-YdCsXexJgFYCOcO8
+GET http://localhost:8000/api/sessions/2
 ###
 
 ###
 POST http://localhost:8000/api/sessions
-
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiZnVsbF9uYW1lIjoiQ2hyaXN0aW5lIFJpYW4gIiwiY29udGFjdF9waG9uZSI6IjA3OTkwODcxODgiLCJhZGRyZXNzIjoiOTAga2VueWEiLCJpZCI6MX0sInJvbGUiOiJhZG1pbiIsImV4cCI6MTczOTU3MjI4OX0.jN-mil8vpg8OaYlvh41E46MgrC-YdCsXexJgFYCOcO8
 Content-Type: application/json
 
 {
-
    "therapist_id": 1,
    "user_id": 2,
    "session_notes": "This is a session note",
-   "session_date": 2021-10-10
+   "session_date": "2021-10-10"
 }
 ###
 POST http://localhost:8000/api/sessions

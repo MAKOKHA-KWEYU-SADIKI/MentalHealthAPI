@@ -48,7 +48,7 @@ export const loginUser = async (c: Context) => {
                  // 3 hour  => SESSION EXPIRATION
             }
             // console.log(payload)
-            console.log(process.env.JWT_SECRET)
+            // console.log(process.env.JWT_SECRET)
             let secret = process.env.JWT_SECRET as string;  // secret key
             // console.log(secret); //
             const token = await sign(payload, secret);   // create a JWT token
